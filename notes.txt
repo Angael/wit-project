@@ -6,3 +6,16 @@ docker run -dp 3000:3000 wit-project
 docker tag docker101tutorial angealff/docker101tutorial
 
 docker push angealff/docker101tutorial
+
+
+
+// Deploy na ACR
+docker build -t wit-project .
+
+docker tag wit-project acrinzynierka.azurecr.io/wit-project:v1
+
+az login
+
+az acr login --name acrinzynierka
+
+docker push acrinzynierka.azurecr.io/wit-project:v1
