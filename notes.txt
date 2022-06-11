@@ -1,0 +1,8 @@
+docker build -t wit-project .
+
+docker run -dp 3000:3000 wit-project
+
+// Moze przydatne
+docker tag docker101tutorial angealff/docker101tutorial
+
+docker push angealff/docker101tutorial
