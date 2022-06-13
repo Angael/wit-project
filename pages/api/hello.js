@@ -20,7 +20,7 @@ export default async function handler(req, res) {
         res.status(200).json({
             name: 'John Doe',
             database: '' + process.env.DB_HOST, // normal env
-            mySecret: '' + process.env.mySecret, // keyvault
+            mySecret: '' + process.env.mySecret, // keyvault but from library? maybe?
             i,
             aaasd,
             error: e.toString(),
