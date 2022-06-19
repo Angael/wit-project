@@ -1,17 +1,12 @@
-import knex from 'knex';
+const dbConfig = {
+    endpoint: process.env.DB_ENDPOINT,
+    key: process.env.DB_KEY,
+    databaseId: 'Tasks',
+    containerId: 'Items',
+    partitionKey: { kind: 'Hash', paths: ['/category'] },
+};
 
-export const DB = knex({
-    client: 'mssql',
-    connection: {
-        host: process.env.DB_HOST,
-        database: process.env.DB_NAME,
-        user: process.env.DB_USER,
-        password: process.env.DB_PASS,
-        port: 1433,
-        ssl: true,
-        debug: true,
-        options: {
-            encrypt: true,
-        },
-    },
-});
+// no ES export because this file is manually
+module.exports = {
+    dbConfig,
+};

@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import LoginInputs from '../components/login/LoginInputs';
 import Navbar from '../components/navbar/Navbar';
-import { useAuth } from '../components/firebase/useAuth';
+import { useAuth } from '../utils/firebase/useAuth';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
 import { PageContainer } from '../styles/PageContainer';

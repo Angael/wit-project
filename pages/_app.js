@@ -1,5 +1,5 @@
 import { CssBaseline, createTheme, ThemeProvider } from '@mui/material';
-import { AuthContextProvider } from '../components/firebase/authContextProvider';
+import { AuthContextProvider } from '../utils/firebase/authContextProvider';
 
 const theme = createTheme();
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { useAuth } from '../firebase/useAuth';
+import { useAuth } from '../../utils/firebase/useAuth';
 import { Link as MuiLink, Stack } from '@mui/material';
 
 const Navbar = () => {

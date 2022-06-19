@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 import LoginInputs from '../components/login/LoginInputs';
 import Navbar from '../components/navbar/Navbar';
-import { useAuth } from '../components/firebase/useAuth';
+import { useAuth } from '../utils/firebase/useAuth';
 import { PageContainer } from '../styles/PageContainer';
 import { Typography } from '@mui/material';
 
