@@ -1,36 +1,38 @@
-// server.js
-const { createServer } = require('http');
-const { parse } = require('url');
-const next = require('next');
-const { apiUploadHandler } = require('./express-api/apiUploadHandler');
+const dotenv = require('dotenv');
+dotenv.config({ path: './backend/.env.local' });
+dotenv.config({ path: './backend/.env' });
 
-const dev = process.env.NODE_ENV !== 'production';
-const hostname = 'localhost';
-const port = 3000;
-// when using middleware `hostname` and `port` must be provided below
-const app = next({ dev, hostname, port });
-const handle = app.getRequestHandler();
+const express = require('express');
+const path = require('path');
+const bodyParser = require('body-parser');
 
-app.prepare().then(() => {
-    createServer(async (req, res) => {
-        try {
-            // Be sure to pass `true` as the second argument to `url.parse`.
-            // This tells it to parse the query portion of the URL.
-            const parsedUrl = parse(req.url, true);
-            const { pathname } = parsedUrl;
+const { routes } = require('./backend/routes');
+const { applyRoutes } = require('./backend/utils/applyRoutes');
+const initDb = require('./backend/initDB');
 
-            if (pathname === '/api/upload') {
-                await apiUploadHandler(req, res);
-            } else {
-                await handle(req, res, parsedUrl);
-            }
-        } catch (err) {
-            console.error('Error occurred handling', req.url, err);
-            res.statusCode = 500;
-            res.end('internal server error');
-        }
-    }).listen(port, err => {
-        if (err) throw err;
-        console.log(`> Ready on http://${hostname}:${port}`);
-    });
+const router = express();
+const port = process.env.PORT || 5000;
+
+router.use(bodyParser.json());
+router.use(bodyParser.urlencoded({ extended: true }));
+
+// API calls
+router.get('/api/hello', (req, res) => {
+    res.send({ express: 'Hello From Express' });
 });
+
+applyRoutes(routes, router);
+
+if (process.env.NODE_ENV === 'production') {
+    // Serve any static files
+    router.use(express.static(path.join(__dirname, 'client/build')));
+
+    // Handle React routing, return all requests to React app
+    router.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    });
+}
+
+initDb();
+
+router.listen(port, () => console.log(`Listening on port ${port}`));

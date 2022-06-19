@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# create-react-app React Project with Node Express Backend
 
-## Getting Started
+> Example on using create-react-app with a Node Express Backend
 
-First, run the development server:
+## Usage
 
-```bash
-npm run dev
-# or
+Install [nodemon](https://github.com/remy/nodemon) globally
+
+```
+npm i nodemon -g
+```
+
+Install server and client dependencies
+
+```
+yarn
+cd client
+yarn
+```
+
+To start the server and client at the same time (from the root of the project)
+
+```
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Running the production build on localhost. This will create a production build, then Node will serve the app on http://localhost:5000
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+NODE_ENV=production yarn dev:server
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## How this works
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+The key to use an Express backend with a project created with `create-react-app` is on using a **proxy**. We have a _proxy_ entry in `client/package.json`
 
-## Learn More
+```
+"proxy": "http://localhost:5000/"
+```
 
-To learn more about Next.js, take a look at the following resources:
+This tells Webpack development server to proxy our API requests to our API server, given that our Express server is running on **localhost:5000**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tutorial
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Visit my [blog post](https://esausilva.com/2017/11/14/how-to-use-create-react-app-with-a-node-express-backend-api/) entry for a detailed step-by-step guide.
 
-## Deploy on Vercel
+[Deployed app](https://cra-express.herokuapp.com/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Giving Back
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+If you would like to support my work and the time I put into making tutorials, consider getting me a coffee by clicking on the image below. I would really appreciate it!
+
+[![Buy Me A Coffee](https://www.buymeacoffee.com/assets/img/custom_images/black_img.png)](https://www.buymeacoffee.com/esausilva)
+
+-Esau
