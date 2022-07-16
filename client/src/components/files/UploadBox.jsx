@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Stack, styled } from '@mui/material';
 import API from '../../utils/axios';
+import { queryClient } from '../../App.jsx';
 
 const Input = styled('input')({
     display: 'none',
@@ -24,6 +25,7 @@ const UploadBox = () => {
         })
             .then(response => {
                 console.log('response', response);
+                queryClient.invalidateQueries('fileList');
             })
             .catch(e => {
                 console.log('e', e);
@@ -31,7 +33,7 @@ const UploadBox = () => {
     };
 
     return (
-        <Stack>
+        <Stack alignItems='center'>
             <label htmlFor='upload-input'>
                 <Input
                     id='upload-input'

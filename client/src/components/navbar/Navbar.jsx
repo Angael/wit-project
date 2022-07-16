@@ -8,7 +8,7 @@ const Navbar = () => {
     const { authUser, signOut } = useAuth();
 
     return (
-        <Stack direction='row' gap={2} justifyContent='center'>
+        <Stack direction='row' gap={2} justifyContent='center' sx={{ pb: 3 }}>
             <NavLink to='/'>Strona główna</NavLink>
             {!authUser && (
                 <>

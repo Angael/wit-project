@@ -45,7 +45,7 @@ const routes = [
 
             console.log({ newItem });
 
-            res.json(newItem);
+            res.status(204).send();
             // const filename = req.file.filename;
             // mainUploadImageFn({
             //     buffer: req.file.buffer,

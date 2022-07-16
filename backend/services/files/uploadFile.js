@@ -15,15 +15,14 @@ const uploadFile = async (file, uid) => {
         const newItem = {
             test: true,
             id: nanoid(),
-            filename: file,
+            filename: file.originalname,
             accountUid: uid,
+            size: file.size,
         };
 
-        // const { resource: createdItem } = await container.items.create(
-        //     newItem
-        // );
+        const { resource: createdItem } = await container.items.create(newItem);
 
-        return newItem;
+        return createdItem;
     } catch (e) {
         console.log(e);
         throw new Error(e);

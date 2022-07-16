@@ -1,7 +1,6 @@
 import React from 'react';
 import API from '../../utils/axios';
 import { useQuery } from 'react-query';
-import { useAuth } from '../../utils/firebase/useAuth';
 import {
     Button,
     Card,
@@ -17,7 +16,14 @@ const FileList = () => {
     const fileList = useQuery('fileList', fetchList);
 
     return (
-        <Stack gap={1} sx={{ my: 2 }}>
+        <Stack
+            gap={1}
+            sx={{
+                my: 2,
+                opacity: fileList.isRefetching ? 0.7 : 1,
+                transition: '0.1s',
+            }}
+        >
             {fileList.isFetching && !fileList.isRefetching && (
                 <CircularProgress />
             )}
