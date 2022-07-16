@@ -8,6 +8,11 @@ import { routes } from './routes.js';
 import { applyRoutes } from './utils/applyRoutes.js';
 import initDb from './initDB.js';
 
+// ESM fixes for missing system variables
+import * as url from 'url';
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
 const router = express();
 const port = process.env.PORT || 5000;
 

@@ -5,12 +5,12 @@
   "description": "Praca dyplomowa",
   "author": "Krzysztof Widacki",
   "scripts": {
-    "client": "cd client && yarn start",
-    "server": "tsc-watch --onSuccess \"node ./dist/server.js\"",
-    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "dev:server": "cd client && yarn build && cd .. && yarn start",
-    "start": "tsc && node ./dist/server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "client:dev": "cd client && yarn start",
+    "client:build": "cd client && yarn build",
+    "server:dev": "tsc-watch --onSuccess \"node ./dist/server.js\"",
+    "server:build": "tsc",
+    "build": "concurrently --kill-others-on-fail \"yarn client:build\" \"yarn server:build\"",
+    "start": "cross-env NODE_ENV=production node ./dist/server.js"
   },
   "dependencies": {
     "@azure/cosmos": "^3.16.1",
