@@ -1,0 +1,10 @@
+
+# Pull image from acr
+
+az login
+az acr login --name acrinzynierka
+
+docker pull acrinzynierka.azurecr.io/wit-project:17
+
+# Inspecting image
+docker run -idp 3000:3000 acrinzynierka.azurecr.io/wit-project:18 sh
