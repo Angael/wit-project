@@ -1,4 +1,4 @@
-import cosmosDBConfig from '../../config/cosmosDB';
+import cosmosDBConfig from '../../config/cosmosDB.js';
 import { nanoid } from 'nanoid';
 import { CosmosClient } from '@azure/cosmos';
 // TODO write to blob storage

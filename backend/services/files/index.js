@@ -1,8 +1,8 @@
-import { areAllProvided } from '../../utils/areAllProvided';
-import multerUploadMiddleware from '../../middleware/multerMiddleware';
-import authUser from '../../middleware/authUser';
-import listUserFiles from './listUserFiles';
-import uploadFile from './uploadFile';
+import { areAllProvided } from '../../utils/areAllProvided.js';
+import multerUploadMiddleware from '../../middleware/multerMiddleware.js';
+import authUser from '../../middleware/authUser.js';
+import listUserFiles from './listUserFiles.js';
+import uploadFile from './uploadFile.js';
 
 const routes = [
     {
@@ -64,4 +64,4 @@ const routes = [
     },
 ];
 
-module.exports = routes;
+export default routes;

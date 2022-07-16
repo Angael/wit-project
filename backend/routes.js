@@ -1,4 +1,4 @@
-import fileRoutes from './services/files';
-import authRoutes from './services/auth';
+import fileRoutes from './services/files/index.js';
+import authRoutes from './services/auth/index.js';
 
 export const routes = [fileRoutes, authRoutes].flat();

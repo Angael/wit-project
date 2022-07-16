@@ -1,4 +1,4 @@
-import admin from '../config/firebase';
+import admin from '../config/firebase.js';
 
 const authUser = (req, res, next) => {
     let token = req.get('Authorization');
@@ -19,4 +19,4 @@ const authUser = (req, res, next) => {
     }
 };
 
-module.exports = authUser;
+export default authUser;

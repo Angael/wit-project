@@ -1,12 +1,12 @@
-import './env';
+import './env.js';
 
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
 
-import { routes } from './routes';
-import { applyRoutes } from './utils/applyRoutes';
-import initDb from './initDB';
+import { routes } from './routes.js';
+import { applyRoutes } from './utils/applyRoutes.js';
+import initDb from './initDB.js';
 
 const router = express();
 const port = process.env.PORT || 5000;

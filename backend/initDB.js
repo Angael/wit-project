@@ -1,5 +1,5 @@
 import { CosmosClient } from '@azure/cosmos';
-import cosmosDBConfig from './config/cosmosDB';
+import cosmosDBConfig from './config/cosmosDB.js';
 
 /*
 // This script ensures that the database is setup and populated correctly

@@ -1,4 +1,4 @@
-import cosmosDBConfig from '../../config/cosmosDB';
+import cosmosDBConfig from '../../config/cosmosDB.js';
 import { CosmosClient } from '@azure/cosmos';
 
 const listUserFiles = async uid => {
@@ -31,4 +31,4 @@ const listUserFiles = async uid => {
     }
 };
 
-module.exports = listUserFiles;
+export default listUserFiles;

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="changed to import syntax, still have to add babel">
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wit-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wit-project.iml" afterDir="false" />
+    <list default="true" id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/initDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/initDB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/authUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/authUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/multerMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/multerMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/files/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/files/uploadFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/uploadFile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/add_cosmos_db2" />
+        <entry key="$PROJECT_DIR$" value="babel_backend" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -32,6 +35,10 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="JsBowerSettings">
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -46,9 +53,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="I:\_projekty\node\wit-project\client\node_modules\prettier" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.JavaScript" />
     <property name="ts.external.directory.path" value="I:\_projekty\node\wit-project\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -62,7 +71,7 @@
       <recent name="I:\_projekty\node\wit-project\backend\services\files" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.server">
+  <component name="RunManager" selected="npm.client">
     <configuration name="client" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
@@ -103,9 +112,11 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.client" />
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.dev" />
         <item itemvalue="npm.server" />
         <item itemvalue="npm.client" />
-        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -119,7 +130,7 @@
       <updated>1655662807557</updated>
       <workItem from="1655662809221" duration="4886000" />
       <workItem from="1657955269939" duration="530000" />
-      <workItem from="1657955827538" duration="2982000" />
+      <workItem from="1657955827538" duration="3994000" />
     </task>
     <task id="LOCAL-00001" summary="Before migrating to import syntax">
       <created>1657955494613</created>
@@ -135,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657957184830</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="working tsc">
+      <created>1657958842314</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1657958842314</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +162,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Before migrating to import syntax" />
     <MESSAGE value="changed to import syntax, still have to add babel" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed to import syntax, still have to add babel" />
+    <MESSAGE value="working tsc" />
+    <option name="LAST_COMMIT_MESSAGE" value="working tsc" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

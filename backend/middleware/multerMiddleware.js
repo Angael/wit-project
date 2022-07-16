@@ -7,4 +7,4 @@ const multerUploadMiddleware = multer({
     limits: 1024 * 1024 * 2, // 2 MB
 });
 
-module.exports = multerUploadMiddleware;
+export default multerUploadMiddleware;
