@@ -1,104 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8df56adc-b6ed-4977-ba2c-271d169f69ed" name="Changes" comment="Test if connecting to mssql works">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/config/cosmosDB.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/middleware/authUser.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/middleware/multerMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/routes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/auth/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/files/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/files/listFiles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/applyMiddleware.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/applyRoutes.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/utils/areAllProvided.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/manifest.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/App.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Layout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/Router.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/registerServiceWorker.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/wit-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-utils/authMiddleware.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-utils/db.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-utils/firebaseConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/files/UploadBox.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/files/UploadBox.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/login/LoginInputs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/login/LoginInputs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navbar/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/navbar/Navbar.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express-api/apiUploadHandler.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/initDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/initDB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knexfile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/migrations/20220613131227_init.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/notes.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/_app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/listFiles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/api/upload.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/files.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Files.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Register.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/vercel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/PageContainer.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/axios.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/firebase/authContextProvider.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/firebase/authContextProvider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/firebase/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/firebase/firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/firebase/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/firebase/useAuth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    <list default="true" id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="api endpoint for listing user files; ProtectedRoute.jsx">
+      <change afterPath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/services/files/uploadFile.cjs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/ProtectedRoute.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/files/FileList.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/cosmosDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/cosmosDB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/files/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/files/listFiles.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Files.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Files.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Router.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/utils/firebase/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/firebase/useAuth.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <favorite-branches>
-      <branch-storage>
-        <map>
-          <entry type="LOCAL">
-            <value>
-              <list>
-                <branch-info repo="$PROJECT_DIR$" source="feature/add_cosmos_db2" />
-              </list>
-            </value>
-          </entry>
-        </map>
-      </branch-storage>
-    </favorite-branches>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="no_push_cutom_server_cosmos_db" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -112,22 +35,16 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2A9L2qSRXHkjONF4Rw50YOb4Dzp" />
+  <component name="ProjectId" id="2Ao4rr8Z1y8PE7eeV1gfqVvFTQ0" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="javascript.nodejs.core.library.configured.version" value="14.18.1" />
-    <property name="javascript.nodejs.core.library.typings.version" value="14.18.1" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/services/auth" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/services/files" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="I:\_projekty\node\wit-project\client\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
@@ -136,69 +53,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="I:\_projekty\node\wit-project\backend\services\auth" />
-      <recent name="I:\_projekty\node\wit-project\backend" />
-      <recent name="I:\_projekty\node\wit-project" />
-      <recent name="I:\_projekty\node\wit-project\client" />
-      <recent name="I:\_projekty\node\wit-project\client\src" />
-    </key>
-    <key name="es6.move.members.recent.items">
-      <recent name="I:\_projekty\node\wit-project\initDB.js" />
-      <recent name="I:\_projekty\node\wit-project\components\firebase\useAuth.js" />
-      <recent name="I:\_projekty\node\wit-project\components\firebase\authContextProvider.js" />
-      <recent name="I:\_projekty\node\wit-project\components\firebase\useFirebaseAuth.js" />
+      <recent name="I:\_projekty\node\wit-project\backend\services\files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="I:\_projekty\node\wit-project\backend\middleware" />
-      <recent name="I:\_projekty\node\wit-project\backend\services\upload" />
-      <recent name="I:\_projekty\node\wit-project\backend" />
-      <recent name="I:\_projekty\node\wit-project\api-utils" />
-      <recent name="I:\_projekty\node\wit-project\utils" />
+      <recent name="I:\_projekty\node\wit-project\backend\services\files" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev">
-    <configuration name="Build &amp; Run" type="docker-deploy" factoryName="dockerfile" server-name="Docker">
-      <deployment type="dockerfile">
-        <settings>
-          <option name="imageTag" value="wit-project" />
-          <option name="containerName" value="wit-project-webstorm" />
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="3000" />
-                <option name="hostPort" value="3000" />
-              </DockerPortBindingImpl>
-            </list>
-          </option>
-          <option name="showCommandPreview" value="true" />
-          <option name="sourceFilePath" value="Dockerfile" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="Run Container" type="docker-deploy" factoryName="docker-image" server-name="Docker">
-      <deployment type="docker-image">
-        <settings>
-          <option name="imageTag" value="wit-project" />
-          <option name="containerName" value="wit-project-webstorm" />
-          <option name="portBindings">
-            <list>
-              <DockerPortBindingImpl>
-                <option name="containerPort" value="3000" />
-                <option name="hostPort" value="3000" />
-              </DockerPortBindingImpl>
-            </list>
-          </option>
-          <option name="showCommandPreview" value="true" />
-        </settings>
-      </deployment>
-      <method v="2" />
-    </configuration>
-    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="npm.server">
+    <configuration name="client" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
+        <script value="client" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -214,131 +80,38 @@
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="start (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="start" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+    <configuration name="server" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="start" />
+        <script value="server" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
       <method v="2" />
     </configuration>
-    <configuration name="test" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
-      <package-json value="$PROJECT_DIR$/client/package.json" />
-      <command value="run" />
-      <scripts>
-        <script value="test" />
-      </scripts>
-      <node-interpreter value="project" />
-      <envs />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="Docker.Build &amp; Run" />
-      <item itemvalue="Docker.Run Container" />
-      <item itemvalue="npm.dev" />
-      <item itemvalue="npm.build" />
-      <item itemvalue="npm.start" />
-      <item itemvalue="npm.test" />
-      <item itemvalue="npm.start (1)" />
-    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="npm.server" />
+        <item itemvalue="npm.client" />
         <item itemvalue="npm.dev" />
-        <item itemvalue="npm.start (1)" />
-        <item itemvalue="npm.test" />
-        <item itemvalue="npm.start" />
-        <item itemvalue="npm.build" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8df56adc-b6ed-4977-ba2c-271d169f69ed" name="Changes" comment="" />
-      <created>1654416649709</created>
+      <changelist id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="" />
+      <created>1655662807557</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1654416649709</updated>
-      <workItem from="1654416651309" duration="2370000" />
-      <workItem from="1654934726810" duration="11691000" />
-      <workItem from="1655039200131" duration="12110000" />
-      <workItem from="1655108817454" duration="17864000" />
-      <workItem from="1655137684505" duration="8713000" />
-      <workItem from="1655194405110" duration="1252000" />
-      <workItem from="1655231892917" duration="13029000" />
-      <workItem from="1655279233321" duration="597000" />
-      <workItem from="1655372362601" duration="7595000" />
-      <workItem from="1655380992910" duration="10989000" />
-      <workItem from="1655638829296" duration="9709000" />
+      <updated>1655662807557</updated>
+      <workItem from="1655662809221" duration="4886000" />
     </task>
-    <task id="LOCAL-00001" summary="Dockerfile">
-      <created>1654939645076</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1654939645076</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Dockerfile; better tag for deployment; prettier; secrets test">
-      <created>1654959892782</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1654959892782</updated>
-    </task>
-    <task id="LOCAL-00003" summary="firebase;keyvault;azure identity;login;register;stub pages">
-      <created>1655112567257</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1655112567257</updated>
-    </task>
-    <task id="LOCAL-00004" summary="add .env to replace tokens on it when building">
-      <created>1655114828468</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1655114828468</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Test if connecting to mssql works">
-      <created>1655147080886</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1655147080886</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Before changing repo into express + create react app">
-      <created>1655640358050</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1655640358050</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Dockerfile" />
-    <MESSAGE value="Dockerfile; better tag for deployment; prettier; secrets test" />
-    <MESSAGE value="firebase;keyvault;azure identity;login;register;stub pages" />
-    <MESSAGE value="add .env to replace tokens on it when building" />
-    <MESSAGE value="Test if connecting to mssql works" />
-    <MESSAGE value="Before changing repo into express + create react app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before changing repo into express + create react app" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

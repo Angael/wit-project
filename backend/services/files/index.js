@@ -1,8 +1,30 @@
 const { areAllProvided } = require('../../utils/areAllProvided');
 const multerUploadMiddleware = require('../../middleware/multerMiddleware');
 const authUser = require('../../middleware/authUser');
+const listUserFiles = require('./listUserFiles');
+const uploadFile = require('./uploadFile.cjs');
 
 const routes = [
+    {
+        path: '/api/list',
+        method: 'get',
+        middleware: [authUser],
+        handler: async (req, res) => {
+            if (!areAllProvided(req.user?.uid)) {
+                res.status(400).send();
+                return;
+            }
+
+            const files = await listUserFiles(req.user.uid);
+
+            const trimmedFiles = files.map(f => ({
+                filename: f.filename,
+                id: f.id,
+            }));
+
+            res.json(trimmedFiles);
+        },
+    },
     {
         path: '/api/upload',
         method: 'post',
@@ -19,6 +41,11 @@ const routes = [
             console.log('file is');
             console.log(req.file);
 
+            const newItem = await uploadFile(req.file, req.user.uid);
+
+            console.log({ newItem });
+
+            res.json(newItem);
             // const filename = req.file.filename;
             // mainUploadImageFn({
             //     buffer: req.file.buffer,

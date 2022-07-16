@@ -1,9 +1,9 @@
 const cosmosDBConfig = {
     endpoint: process.env.DB_ENDPOINT,
     key: process.env.DB_KEY,
-    databaseId: 'Tasks',
+    databaseId: 'Files',
     containerId: 'Items',
-    partitionKey: { kind: 'Hash', paths: ['/category'] },
+    partitionKey: { kind: 'Hash', paths: ['/accountUid'] },
 };
 
 // no ES export because this file is manually
