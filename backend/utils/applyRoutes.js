@@ -1,5 +1,5 @@
 // Order of middleware is important!
-const applyRoutes = (routes, router) => {
+export const applyRoutes = (routes, router) => {
     for (const route of routes) {
         const { method, path, middleware, handler } = route;
 
@@ -10,5 +10,3 @@ const applyRoutes = (routes, router) => {
         }
     }
 };
-
-module.exports = { applyRoutes };

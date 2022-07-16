@@ -1,14 +1,12 @@
-const dotenv = require('dotenv');
-dotenv.config({ path: './backend/.env.local' });
-dotenv.config({ path: './backend/.env' });
+import './backend/env';
 
-const express = require('express');
-const path = require('path');
-const bodyParser = require('body-parser');
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
 
-const { routes } = require('./backend/routes');
-const { applyRoutes } = require('./backend/utils/applyRoutes');
-const initDb = require('./backend/initDB');
+import { routes } from './backend/routes';
+import { applyRoutes } from './backend/utils/applyRoutes';
+import initDb from './backend/initDB';
 
 const router = express();
 const port = process.env.PORT || 5000;

@@ -1,7 +1,7 @@
-const cosmosDBConfig = require('../../config/cosmosDB')
-const CosmosClient = require('@azure/cosmos').CosmosClient;
+import cosmosDBConfig from '../../config/cosmosDB';
+import { CosmosClient } from '@azure/cosmos';
 
-const listUserFiles = async (uid) => {
+const listUserFiles = async uid => {
     try {
         const { endpoint, key, databaseId, containerId } = cosmosDBConfig;
 
@@ -29,6 +29,6 @@ const listUserFiles = async (uid) => {
         console.log(e);
         throw new Error(e);
     }
-}
+};
 
-module.exports = listUserFiles
+module.exports = listUserFiles;

@@ -1,7 +1,5 @@
-const applyMiddleware = (middlewareWrappers, router) => {
+export const applyMiddleware = (middlewareWrappers, router) => {
     for (const wrapper of middlewareWrappers) {
         wrapper(router);
     }
 };
-
-module.exports = { applyMiddleware };

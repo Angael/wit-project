@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="api endpoint for listing user files; ProtectedRoute.jsx">
-      <change afterPath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/backend/services/files/uploadFile.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/ProtectedRoute.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/files/FileList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+    <list default="true" id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/backend/env.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/config/cosmosDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/cosmosDB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/config/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/firebase.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/initDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/initDB.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/authUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/authUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/middleware/multerMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/multerMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/auth/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/files/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/files/listFiles.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Files.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Files.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/Router.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/utils/firebase/useAuth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/firebase/useAuth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/files/uploadFile.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/uploadFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/applyMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/applyMiddleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/applyRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/applyRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/utils/areAllProvided.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/areAllProvided.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backend/services/files" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pinMedia" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="I:\_projekty\node\wit-project\client\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
@@ -67,6 +70,7 @@
         <script value="client" />
       </scripts>
       <node-interpreter value="project" />
+      <package-manager value="yarn" />
       <envs />
       <method v="2" />
     </configuration>
@@ -77,6 +81,7 @@
         <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
+      <package-manager value="yarn" />
       <envs />
       <method v="2" />
     </configuration>
@@ -87,9 +92,15 @@
         <script value="server" />
       </scripts>
       <node-interpreter value="project" />
+      <package-manager value="yarn" />
       <envs />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="npm.client" />
+      <item itemvalue="npm.dev" />
+      <item itemvalue="npm.server" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="npm.server" />
@@ -107,11 +118,25 @@
       <option name="presentableId" value="Default" />
       <updated>1655662807557</updated>
       <workItem from="1655662809221" duration="4886000" />
+      <workItem from="1657955269939" duration="530000" />
+      <workItem from="1657955827538" duration="1284000" />
     </task>
+    <task id="LOCAL-00001" summary="Before migrating to import syntax">
+      <created>1657955494613</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1657955494613</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Before migrating to import syntax" />
+    <option name="LAST_COMMIT_MESSAGE" value="Before migrating to import syntax" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

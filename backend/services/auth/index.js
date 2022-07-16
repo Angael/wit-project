@@ -1,3 +1,3 @@
 const routes = [];
 
-module.exports = routes;
+export default routes;

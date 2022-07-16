@@ -6,5 +6,4 @@ const cosmosDBConfig = {
     partitionKey: { kind: 'Hash', paths: ['/accountUid'] },
 };
 
-// no ES export because this file is manually
-module.exports = cosmosDBConfig;
+export default cosmosDBConfig;

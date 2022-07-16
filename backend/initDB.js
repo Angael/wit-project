@@ -1,5 +1,5 @@
-const CosmosClient = require('@azure/cosmos').CosmosClient;
-const cosmosDBConfig = require('./config/cosmosDB');
+import { CosmosClient } from '@azure/cosmos';
+import cosmosDBConfig from './config/cosmosDB';
 
 /*
 // This script ensures that the database is setup and populated correctly
@@ -34,4 +34,4 @@ const initDb = async () => {
     await create(client, databaseId, containerId);
 };
 
-module.exports = initDb;
+export default initDb;

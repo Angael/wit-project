@@ -1,6 +1,4 @@
-const fileRoutes = require('./services/files');
-const authRoutes = require('./services/auth');
+import fileRoutes from './services/files';
+import authRoutes from './services/auth';
 
-const routes = [fileRoutes, authRoutes].flat();
-
-module.exports = { routes };
+export const routes = [fileRoutes, authRoutes].flat();

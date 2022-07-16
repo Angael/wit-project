@@ -1,4 +1,4 @@
-const admin = require('../config/firebase');
+import admin from '../config/firebase';
 
 const authUser = (req, res, next) => {
     let token = req.get('Authorization');

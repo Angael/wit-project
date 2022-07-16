@@ -1,8 +1,8 @@
-const { areAllProvided } = require('../../utils/areAllProvided');
-const multerUploadMiddleware = require('../../middleware/multerMiddleware');
-const authUser = require('../../middleware/authUser');
-const listUserFiles = require('./listUserFiles');
-const uploadFile = require('./uploadFile.cjs');
+import { areAllProvided } from '../../utils/areAllProvided';
+import multerUploadMiddleware from '../../middleware/multerMiddleware';
+import authUser from '../../middleware/authUser';
+import listUserFiles from './listUserFiles';
+import uploadFile from './uploadFile.cjs';
 
 const routes = [
     {
