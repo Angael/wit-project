@@ -1,23 +1,23 @@
-FROM node:16.16.0-alpine
+# deps
+FROM node:16.16.0-alpine AS deps
 
-ENV PORT 3000
-
-# Create app directory
-RUN mkdir -p /usr/src/app
-RUN mkdir -p /usr/src/app/client
 WORKDIR /usr/src/app
 
-# Installing dependencies
-COPY package.json yarn.lock /usr/src/app/
-COPY client/package.json client/yarn.lock /usr/src/app/client/
+COPY package.json /usr/src/app/
+COPY client/package.json /usr/src/app/client/
+
 RUN yarn install && cd 'client' && yarn install
 
-# Copying source files
-COPY . /usr/src/app
+# prod image
+FROM node:16.16.0-alpine
+ENV PORT 3000
 
-# Building app
+WORKDIR /usr/src/app
+
+COPY . /usr/src/app
+COPY --from=deps /usr/src/app/ /usr/src/app/
+
 RUN yarn run build
 EXPOSE 3000
 
-# Running the app
 CMD "yarn" "run" "start"
