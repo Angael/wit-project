@@ -2,7 +2,7 @@ import { areAllProvided } from '../../utils/areAllProvided';
 import multerUploadMiddleware from '../../middleware/multerMiddleware';
 import authUser from '../../middleware/authUser';
 import listUserFiles from './listUserFiles';
-import uploadFile from './uploadFile.cjs';
+import uploadFile from './uploadFile';
 
 const routes = [
     {

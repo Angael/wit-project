@@ -1,23 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/backend/env.js" afterDir="false" />
+    <list default="true" id="ba01c4a6-6370-41e3-8897-8644410404d2" name="Changes" comment="changed to import syntax, still have to add babel">
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wit-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wit-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/cosmosDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/cosmosDB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/config/firebase.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/config/firebase.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/initDB.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/initDB.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/middleware/authUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/authUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/middleware/multerMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/middleware/multerMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/auth/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/services/files/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/listUserFiles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/services/files/uploadFile.cjs" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/uploadFile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/applyMiddleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/applyMiddleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/applyRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/applyRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/utils/areAllProvided.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/utils/areAllProvided.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/services/files/uploadFile.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/services/files/uploadFile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/server.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +18,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/add_cosmos_db2" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitSEFilterConfiguration">
@@ -47,18 +45,20 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../pinMedia" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="prettierjs.PrettierConfiguration.Package" value="I:\_projekty\node\wit-project\client\node_modules\prettier" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
-    <property name="ts.external.directory.path" value="I:\WebStorm\WebStorm 2021.1.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="ts.external.directory.path" value="I:\_projekty\node\wit-project\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="I:\_projekty\node\wit-project" />
       <recent name="I:\_projekty\node\wit-project\backend\services\files" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="I:\_projekty\node\wit-project\backend" />
       <recent name="I:\_projekty\node\wit-project\backend\services\files" />
     </key>
   </component>
@@ -119,7 +119,7 @@
       <updated>1655662807557</updated>
       <workItem from="1655662809221" duration="4886000" />
       <workItem from="1657955269939" duration="530000" />
-      <workItem from="1657955827538" duration="1284000" />
+      <workItem from="1657955827538" duration="2982000" />
     </task>
     <task id="LOCAL-00001" summary="Before migrating to import syntax">
       <created>1657955494613</created>
@@ -128,7 +128,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657955494613</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="changed to import syntax, still have to add babel">
+      <created>1657957184830</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1657957184830</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,7 +143,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Before migrating to import syntax" />
-    <option name="LAST_COMMIT_MESSAGE" value="Before migrating to import syntax" />
+    <MESSAGE value="changed to import syntax, still have to add babel" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed to import syntax, still have to add babel" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

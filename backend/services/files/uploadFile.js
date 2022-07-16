@@ -1,7 +1,6 @@
-import  cosmosDBConfig from '../../config/cosmosDB'
-// Tutaj jest problem bo nanoid używa ESM
-import  { nanoid } from 'nanoid'
-import { CosmosClient } from '@azure/cosmos'
+import cosmosDBConfig from '../../config/cosmosDB';
+import { nanoid } from 'nanoid';
+import { CosmosClient } from '@azure/cosmos';
 // TODO write to blob storage
 
 const uploadFile = async (file, uid) => {

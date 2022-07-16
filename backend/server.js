@@ -1,12 +1,12 @@
-import './backend/env';
+import './env';
 
 import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
 
-import { routes } from './backend/routes';
-import { applyRoutes } from './backend/utils/applyRoutes';
-import initDb from './backend/initDB';
+import { routes } from './routes';
+import { applyRoutes } from './utils/applyRoutes';
+import initDb from './initDB';
 
 const router = express();
 const port = process.env.PORT || 5000;
@@ -23,11 +23,11 @@ applyRoutes(routes, router);
 
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
-    router.use(express.static(path.join(__dirname, 'client/build')));
+    router.use(express.static(path.join(__dirname, '../client/build')));
 
     // Handle React routing, return all requests to React app
     router.get('*', function (req, res) {
-        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+        res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
     });
 }
 
