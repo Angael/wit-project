@@ -1,6 +1,6 @@
 import React from 'react';
 import API from '../../utils/axios';
-import { useQuery } from 'react-query';
+import { QueryCache, useQuery } from 'react-query';
 import {
     Button,
     Card,
@@ -9,11 +9,24 @@ import {
     CircularProgress,
     Stack,
 } from '@mui/material';
+import { queryClient } from '../../App';
 
 const fetchList = () => API.get('/api/list').then(response => response.data);
 
 const FileList = () => {
     const fileList = useQuery('fileList', fetchList);
+
+    const onDownload = id => {
+        API.get('/api/item/' + encodeURIComponent(id)).then(() =>
+            console.log('downloaded')
+        );
+    };
+
+    const onDelete = id => {
+        API.delete('/api/item/' + encodeURIComponent(id)).then(() =>
+            queryClient.invalidateQueries('fileList')
+        );
+    };
 
     return (
         <Stack
@@ -31,8 +44,17 @@ const FileList = () => {
                 <Card key={file.id} variant='outlined'>
                     <CardContent>{file.filename}</CardContent>
                     <CardActions>
-                        <Button variant='contained'>Pobierz</Button>
-                        <Button variant='outlined' color='error'>
+                        <Button
+                            variant='contained'
+                            onClick={() => onDownload(file.id)}
+                        >
+                            Pobierz
+                        </Button>
+                        <Button
+                            variant='outlined'
+                            color='error'
+                            onClick={() => onDelete(file.id)}
+                        >
                             Usuń
                         </Button>
                     </CardActions>

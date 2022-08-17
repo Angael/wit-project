@@ -1,26 +1,24 @@
 import cosmosDBConfig from '../../config/cosmosDB.js';
 import { nanoid } from 'nanoid';
 import { CosmosClient } from '@azure/cosmos';
-// TODO write to blob storage
-import { BlobServiceClient } from "@azure/storage-blob";
+import { BlobServiceClient } from '@azure/storage-blob';
 
 const uploadBlob = async (file, filename) => {
     const blobServiceClient = BlobServiceClient.fromConnectionString(
         process.env.AZURE_STORAGE_CONNECTION_STRING
     );
     const containerClient = blobServiceClient.getContainerClient(
-        "myfiles"
+        process.env.STORAGE_CONTAINER
     );
 
-    const blockBlobClient = containerClient.getBlockBlobClient( filename);
+    const blockBlobClient = containerClient.getBlockBlobClient(filename);
     const response = await blockBlobClient.uploadData(file.buffer);
     if (response._response.status !== 201) {
         throw new Error(
             `Error uploading document ${blockBlobClient.name} to container ${blockBlobClient.containerName}`
         );
     }
-
-}
+};
 
 const uploadFile = async (file, uid) => {
     try {

@@ -3,6 +3,15 @@ import multerUploadMiddleware from '../../middleware/multerMiddleware.js';
 import authUser from '../../middleware/authUser.js';
 import listUserFiles from './listUserFiles.js';
 import uploadFile from './uploadFile.js';
+import deleteFile from './deleteFile.js';
+
+const logReq = req => {
+    console.log('user is');
+    console.log(req.user);
+
+    console.log('file is');
+    console.log(req.file);
+};
 
 const routes = [
     {
@@ -35,31 +44,27 @@ const routes = [
                 return;
             }
 
-            console.log('user is');
-            console.log(req.user);
-
-            console.log('file is');
-            console.log(req.file);
-
             const newItem = await uploadFile(req.file, req.user.uid);
-
             console.log({ newItem });
-
             res.status(204).send();
-            // const filename = req.file.filename;
-            // mainUploadImageFn({
-            //     buffer: req.file.buffer,
-            //     isPrivate,
-            //     userId: req.user.uid,
-            //     filename,
-            // })
-            //     .then(result => {
-            //         res.json('worked');
-            //         // insert rows into DB
-            //     })
-            //     .catch(err => {
-            //         res.status(500).json('didnt work');
-            //     });
+        },
+    },
+    {
+        path: '/api/item/:id',
+        method: 'delete',
+        middleware: [authUser],
+        handler: async (req, res) => {
+            if (!areAllProvided(req.user?.uid, req.params.id)) {
+                res.status(400).send();
+                return;
+            }
+
+            try {
+                await deleteFile(req.params.id, req.user?.uid);
+                res.status(204).send();
+            } catch (e) {
+                res.status(500).send();
+            }
         },
     },
 ];
