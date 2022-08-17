@@ -1,5 +1,6 @@
 import { CosmosClient } from '@azure/cosmos';
 import cosmosDBConfig from './config/cosmosDB.js';
+import { BlobServiceClient } from "@azure/storage-blob";
 
 /*
 // This script ensures that the database is setup and populated correctly
@@ -22,6 +23,22 @@ async function create(client, databaseId, containerId) {
         );
 }
 
+    // Create a container
+const initBlobContainer = async () => {
+    const blobServiceClient = BlobServiceClient.fromConnectionString(
+        process.env.AZURE_STORAGE_CONNECTION_STRING
+    );
+
+    const containerName = process.env.STORAGE_CONTAINER;
+    const containerClient = blobServiceClient.getContainerClient(containerName);
+    try {
+        await containerClient.createIfNotExists();
+    } catch (err) {
+        console.log('failed to create container');
+        console.error(err);
+    }
+}
+
 const initDb = async () => {
     const { endpoint, key, databaseId, containerId } = cosmosDBConfig;
 
@@ -32,6 +49,8 @@ const initDb = async () => {
 
     // Make sure Tasks database is already setup. If not, create it.
     await create(client, databaseId, containerId);
+
+    await initBlobContainer();
 };
 
 export default initDb;
