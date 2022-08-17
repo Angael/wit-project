@@ -67,6 +67,25 @@ const routes = [
             }
         },
     },
+    {
+        path: '/api/item/:id',
+        method: 'get',
+        middleware: [authUser],
+        handler: async (req, res) => {
+            if (!areAllProvided(req.user?.uid, req.params.id)) {
+                res.status(400).send();
+                return;
+            }
+
+            const url = `https://${
+                process.env.AZURE_STORAGE_ACCOUNT_NAME
+            }.blob.core.windows.net/myfiles/${encodeURIComponent(
+                req.params.id
+            )}`;
+
+            res.send({ url });
+        },
+    },
 ];
 
 export default routes;

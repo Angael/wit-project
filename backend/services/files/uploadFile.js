@@ -12,7 +12,11 @@ const uploadBlob = async (file, filename) => {
     );
 
     const blockBlobClient = containerClient.getBlockBlobClient(filename);
-    const response = await blockBlobClient.uploadData(file.buffer);
+    const response = await blockBlobClient.uploadData(file.buffer, {
+        blobHTTPHeaders: {
+            blobContentType: file.mimetype,
+        },
+    });
     if (response._response.status !== 201) {
         throw new Error(
             `Error uploading document ${blockBlobClient.name} to container ${blockBlobClient.containerName}`
@@ -35,6 +39,7 @@ const uploadFile = async (file, uid) => {
             filename: file.originalname,
             accountUid: uid,
             size: file.size,
+            mimetype: file.mimetype,
         };
         await uploadBlob(file, newItem.id);
 

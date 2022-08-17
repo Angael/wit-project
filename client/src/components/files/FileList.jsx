@@ -8,6 +8,7 @@ import {
     CardContent,
     CircularProgress,
     Stack,
+    Typography,
 } from '@mui/material';
 import { queryClient } from '../../App';
 
@@ -16,9 +17,9 @@ const fetchList = () => API.get('/api/list').then(response => response.data);
 const FileList = () => {
     const fileList = useQuery('fileList', fetchList);
 
-    const onDownload = id => {
-        API.get('/api/item/' + encodeURIComponent(id)).then(() =>
-            console.log('downloaded')
+    const onDownload = file => {
+        API.get('/api/item/' + encodeURIComponent(file.id)).then(response =>
+            window.open(response.data.url, '_blank')
         );
     };
 
@@ -42,11 +43,16 @@ const FileList = () => {
             )}
             {fileList.data?.map(file => (
                 <Card key={file.id} variant='outlined'>
-                    <CardContent>{file.filename}</CardContent>
+                    <CardContent>
+                        <Typography variant='body1'>{file.filename}</Typography>
+                        {/*<Typography variant='caption' color='textSecondary'>*/}
+                        {/*    {file.id}*/}
+                        {/*</Typography>*/}
+                    </CardContent>
                     <CardActions>
                         <Button
                             variant='contained'
-                            onClick={() => onDownload(file.id)}
+                            onClick={() => onDownload(file)}
                         >
                             Pobierz
                         </Button>
